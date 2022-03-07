@@ -15,7 +15,7 @@ jobs:
           aws configure set aws_secret_access_key $SECRET_KEY
           aws configure set default.region $REGION
           npm i
-          gulp builder
+          npx gulp build
           aws s3 sync ./dist/ s3://$BUCKET_NAME --exclude ".git/*" --delete --acl public-read
         env: 
           ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
