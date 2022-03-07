@@ -1,0 +1,47 @@
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 95vh;
+}
+
+.intro__btn {
+  margin-top: 3rem;
+}
+
+.intro__bg {
+  position: absolute;
+  z-index: -2;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 200vh;
+  overflow: hidden;
+
+  svg {
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    right: calc(max(-50%, -20rem));
+    width: calc(min(200%, 80rem));
+  }
+}
+
+.intro__title {
+  text-align: center;
+
+  span {
+    display: block;
+  }
+}
+
+.intro__title-small {
+  @include h5-font;
+}
+
+.intro__title-large {
+  margin-top: 1.5rem;
+
+  @include h1-font;
+}

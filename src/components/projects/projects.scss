@@ -1,0 +1,57 @@
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+
+  transform: translateY(5vh);
+
+  &--loaded {
+    animation: projects-loaded $animation-time-short $easing forwards;
+  }
+}
+
+.projects__link {
+  width: 100%;
+  margin-top: 3rem;
+
+  text-align: center;
+}
+
+.projects__item {
+  width: 100%;
+
+  aspect-ratio: 1 / 0.75;
+
+  @include from-to(0, $md) {
+    &:nth-child(n + 2) {
+      border-top-width: 0;
+    }
+  }
+
+  @include from-to($md, $xl) {
+    width: 50%;
+
+    &:not(:last-child):nth-child(odd) {
+      border-right-width: 0;
+    }
+
+    &:nth-child(2n + 3),
+    &:nth-child(2n + 4) {
+      border-top-width: 0;
+    }
+  }
+
+  @include xl-block {
+    width: 33.3%;
+
+    &:not(:last-child):nth-child(3n + 1),
+    &:not(:last-child):nth-child(3n + 2) {
+      border-right-width: 0;
+    }
+
+    &:nth-child(3n + 4),
+    &:nth-child(3n + 5),
+    &:nth-child(3n + 6) {
+      border-top-width: 0;
+    }
+  }
+}

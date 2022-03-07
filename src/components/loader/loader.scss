@@ -1,0 +1,44 @@
+.loader {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.loader__square {
+  position: absolute;
+  top: calc(50% - var(--size) / 2);
+  left: calc(50% - var(--size) / 2);
+  width: var(--size);
+  height: var(--size);
+
+  transform: translate(calc(var(--size) * -1), var(--size));
+
+  border: 1px solid $secondary;
+
+  .loader--loading & {
+    animation: loader $loader-animation-1 $easing infinite forwards;
+  }
+
+  .loader--loaded & {
+    animation: loader-center $loader-animation-2 $easing, loader-scale-down $loader-animation-3 $easing 0.5s forwards;
+  }
+
+  &--first {
+    --size: 4rem;
+  }
+
+  &--second {
+    --size: 3rem;
+  }
+
+  &--third {
+    --size: 2rem;
+  }
+
+  &--fourth {
+    --size: 1rem;
+  }
+}

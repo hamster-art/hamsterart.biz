@@ -1,0 +1,79 @@
+.project {
+  @include hover-box;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  height: auto;
+  padding: 2rem 1rem;
+
+  transition: color 0.3s $easing;
+  transition-delay: 0.1s;
+
+  color: $primary;
+
+  @include xl-block {
+    padding: 3rem 1.5rem;
+  }
+
+  &:hover {
+    color: $inverse;
+  }
+}
+
+.project__color {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    transform: translateY(130%) skewY(20deg);
+    transition: transform 0.3s $easing;
+    transition-delay: 0.1s;
+
+    .project:nth-child(4n + 1) & {
+      background-color: nth($colors, 1);
+    }
+
+    .project:nth-child(4n + 2) & {
+      background-color: nth($colors, 2);
+    }
+
+    .project:nth-child(4n + 3) & {
+      background-color: nth($colors, 3);
+    }
+
+    .project:nth-child(4n + 4) & {
+      background-color: nth($colors, 4);
+    }
+
+    .project:hover & {
+      transform: translateY(0) skewY(0deg);
+    }
+  }
+}
+
+.project__type {
+  @include sub-font;
+}
+
+.project__title {
+  @include h4-font;
+}
+
+.project__type {
+  @include sub-font;
+}

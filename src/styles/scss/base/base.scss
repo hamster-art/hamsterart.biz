@@ -1,0 +1,105 @@
+html {
+  height: 100%;
+
+  font-size: $base-sm;
+
+  @include lg('font-size', $base-lg);
+}
+
+body {
+  @include p-font;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-x: hidden;
+
+  background-color: $bg;
+
+  color: $primary;
+
+  font-family: 'Jura', sans-serif;
+  line-height: 1.4;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  scrollbar-width: thin;
+  scrollbar-color: $primary $secondary;
+
+  &::-webkit-scrollbar {
+    width: 0.3rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 0.3rem;
+
+    background-color: $secondary;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 0.3rem;
+
+    background-color: $primary;
+  }
+
+  &.locked {
+    overflow: hidden;
+  }
+}
+
+main {
+  flex-grow: 1;
+
+  opacity: 1;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'KronaOne', sans-serif;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+
+  white-space: nowrap;
+
+  clip-path: inset(50%);
+}
+
+.content {
+  opacity: 0;
+
+  &--loading {
+    animation: content-loading $animation-time-short $easing forwards;
+  }
+
+  &--loaded {
+    opacity: 1;
+  }
+}

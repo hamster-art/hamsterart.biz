@@ -1,0 +1,38 @@
+.get-in-touch {
+  position: relative;
+  padding-top: 19.5rem;
+
+  text-align: center;
+}
+
+.get-in-touch__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.get-in-touch__btn {
+  margin-top: 3rem;
+}
+
+.get-in-touch__title {
+  @include h2-font;
+}
+
+.get-in-touch__bg {
+  position: absolute;
+  z-index: -2;
+  right: 0;
+  bottom: -18rem;
+  left: 0;
+  height: calc(150vh + 18rem);
+  overflow: hidden;
+
+  svg {
+    position: absolute;
+    z-index: -2;
+    bottom: 2rem;
+    left: calc(max(-20%, calc((100% - 110rem) / 2)));
+    width: calc(min(200%, 60rem));
+    height: calc(min(200%, 60rem));
+  }
+}

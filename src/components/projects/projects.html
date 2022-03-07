@@ -1,0 +1,19 @@
+<div class="projects">
+  @@include("../project/project.html", { "type": "Analytic solution", "title": "Spend toolbox", "link": "/projects/spendbox.html"})
+  @@include("../project/project.html", { "type": "Analytic solution", "title": "Traffic toolbox", "link": "/projects/trafficbox.html"})
+  @@include("../project/project.html", { "type": "Website", "title": "JustControl.it", "link": "/projects/trafficbox-landing.html"})
+  @@include("../project/project.html", { "type": "Website", "title": "Spend landing page", "link": "/projects/spendbox-landing.html"})
+  @@include("../project/project.html", { "type": "Animation", "title": "Logo animation", "link": "/projects/jc-animation.html"})
+  @@include("../project/project.html", { "type": "Education toolbox", "title": "Courseware", "link" : "/projects/cw.html"})
+  @@include("../project/project.html", { "type": "Education toolbox", "title": "LessonGin", "link": "/projects/lg.html"})
+  @@include("../project/project.html", { "type": "Education toolbox", "title": "List Authoring", "link": "/projects/la.html"})
+  @@include("../project/project.html", { "type": "Style guide", "title": "Style guide", "link": "/projects/style-guide.html"})
+  @@if (allProjects !== true) {
+   <div class="projects__link">
+     <a href="projects.html" class="btn">see more</a>
+   </div>
+  }
+  @@if (allProjects === true) {
+    @@include("../project/project.html", { "type": "Animation", "title": "Loader animation", "link": "/projects/loader-animation.html"})
+  }
+</div>

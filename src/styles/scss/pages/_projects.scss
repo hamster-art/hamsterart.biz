@@ -1,0 +1,38 @@
+.project-screens {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.project-screens__item {
+  position: relative;
+  width: 100%;
+
+  &:not(:first-child) {
+    margin-top: 3rem;
+  }
+
+  &--has-border {
+    width: 100%;
+    padding: 1rem;
+
+    border: 1px solid $secondary;
+
+    @include lg('padding', 3rem);
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      z-index: -1;
+      top: 0.33rem;
+      left: 0.33rem;
+      width: calc(100% + 2px);
+      height: calc(100% + 2px);
+
+      transition: top 0.5s $easing, left 0.5s $easing;
+
+      border: 1px solid $secondary;
+    }
+  }
+}

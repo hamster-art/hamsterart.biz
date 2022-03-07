@@ -1,0 +1,83 @@
+@mixin container {
+  width: 80rem;
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@mixin large-container {
+  padding-right: 1rem;
+  padding-left: 1rem;
+
+  @include lg-block {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+}
+
+@mixin small-container {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+
+  @include lg-block {
+    padding-right: 5rem;
+    padding-left: 5rem;
+  }
+}
+
+@mixin h1-font {
+  font-size: 3rem;
+}
+
+@mixin h2-font {
+  font-size: 2.56rem;
+}
+
+@mixin h3-font {
+  font-size: 2.22rem;
+}
+
+@mixin h4-font {
+  font-size: 1.78rem;
+}
+
+@mixin h5-font {
+  font-size: 1.33rem;
+}
+
+@mixin h6-font {
+  font-size: 1rem;
+}
+
+@mixin p-font {
+  font-size: 1rem;
+}
+
+@mixin sub-font {
+  font-size: 0.78rem;
+}
+
+@mixin hover-box {
+  position: relative;
+
+  border: 1px solid $secondary;
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+
+    transition: top 0.5s $easing, left 0.5s $easing;
+
+    border: 1px solid $secondary;
+  }
+
+  &:hover::before {
+    top: 0.33rem;
+    left: 0.33rem;
+  }
+}

@@ -1,0 +1,11 @@
+@@include("./components/layout-header.html", {"page-title": "hamster|art - projects", "base": ""})
+@@include("./components/header/header.html", {"link": "projects", "base": ""})
+<main class="content container">
+  <div class="page-header">
+    <h1 class="page-header__title">Projects</h1>
+  </div>
+  @@include("./components/projects/projects.html", {"allProjects": true})
+</main>
+@@include("./components/get-in-touch/get-in-touch.html")
+@@include("./components/footer/footer.html", {"base": ""})
+@@include("./components/layout-footer.html", {"base": ""})

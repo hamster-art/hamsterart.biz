@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /projects/
+
+Sitemap: http://www.hamsterart.biz/sitemap.xml

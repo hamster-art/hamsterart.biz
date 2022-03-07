@@ -1,0 +1,44 @@
+.link {
+  position: relative;
+
+  color: $primary;
+  font-family: 'KronaOne', sans-serif;
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    z-index: -1;
+    bottom: 0.24rem;
+    left: 0;
+    width: 0;
+    height: 0.5rem;
+
+    transition: width 0.5s $easing;
+
+    background: linear-gradient(90.08deg, #ff006e 0.08%, #fb5607 53.13%, #ffbe0b 99.94%);
+  }
+
+  &--active::before,
+  &:hover::before {
+    width: 100%;
+  }
+}
+
+.link__icon {
+  display: inline-block;
+  width: 1.3rem;
+  height: 1.3rem;
+
+  fill: currentcolor;
+
+  vertical-align: bottom;
+
+  &:first-child {
+    margin-right: 0.5rem;
+  }
+
+  &:last-child {
+    margin-left: 0.5rem;
+  }
+}

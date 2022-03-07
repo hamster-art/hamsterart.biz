@@ -1,0 +1,88 @@
+.cv {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4rem;
+
+
+  @include sm-block {
+    column-gap: 2rem;
+    flex-direction: row;
+    row-gap: 0;
+  }
+
+
+  @include lg-block {
+    column-gap: 4rem;
+  }
+}
+
+.cv__side {
+  position: relative;
+  padding: 2.5rem 1rem;
+  border: 1px solid $secondary;
+  flex-shrink: 0;
+
+
+  @include sm-block {
+    width: 20rem;
+  }
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    z-index: -1;
+    top: 0.33rem;
+    left: 0.33rem;
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+
+    transition: top 0.5s $easing, left 0.5s $easing;
+
+    border: 1px solid $secondary;
+  }
+}
+
+.cv__block + .cv__block {
+  margin-top: 2rem;
+}
+
+.cv__list {
+  list-style-position: inside;
+  margin-top: 1rem;
+
+  &--wrap {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 1rem;
+  }
+}
+
+.cv__title {
+  @include h5-font;
+  margin-bottom: 1.5rem;
+}
+
+.cv__subtitle {
+  @include h6-font;
+}
+
+.cv__text {
+  margin-top: 0.5rem;
+
+  .cv__title + &,
+  .cv__subtitle + & {
+    margin-top: 1rem;
+  }
+}
+
+.cv__subtext {
+  @include sub-font;
+}
+
+.cv__link {
+  margin-top: 0.5rem;
+  display: block;
+  color: $primary;
+  text-decoration: none;
+}

@@ -1,0 +1,24 @@
+# This is a basic workflow to help you get started with Actions
+
+name: ReleaseCI
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Upload hamsterart.biz to Amazon S3
+        run: |
+          pip install awscli
+          aws configure set aws_access_key_id $ACCESS_KEY
+          aws configure set aws_secret_access_key $SECRET_KEY
+          aws configure set default.region $REGION
+          npm i
+          gulp builder
+          aws s3 sync ./dist/ s3://$BUCKET_NAME --exclude ".git/*" --delete --acl public-read
+        env: 
+          ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
+          SECRET_KEY: ${{ secrets.AWS_SECRET_KEY }}
+          REGION: ${{ secrets.AWS_REGION }}
+          BUCKET_NAME: ${{ secrets.AWS_BUCKET_NAME }}

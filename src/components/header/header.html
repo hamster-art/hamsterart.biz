@@ -1,0 +1,41 @@
+<header class="header">
+  <div class="header__inner large-container">
+    <a href="/" class="header__logo">
+      <img src="@@base/assets/logo.svg" alt="hamster|art - design & development" />
+    </a>
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a href="/projects.html" class="link nav__link @@if(link == 'projects'){link--active}">
+            <span>projects</span>
+            <svg class="link__icon">
+              <use xlink:href="@@base/styles/icons/sprite.svg#right_arrow_icon"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="contact.html" class="link nav__link @@if(link == 'contact'){link--active}">
+            <span>contact</span>
+            <svg class="link__icon">
+              <use xlink:href="@@base/styles/icons/sprite.svg#right_arrow_icon"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="cv.html" class="link nav__link @@if(link == 'cv'){link--active}">
+            <span>CV</span>
+            <svg class="link__icon">
+              <use xlink:href="@@base/styles/icons/sprite.svg#right_arrow_icon"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <button class="nav-btn" type="button">
+      <span class="nav-btn__first"></span>
+      <span class="nav-btn__second"></span>
+      <span class="nav-btn__third"></span>
+    </button>
+  </div>
+</header>
+@@include("header-bg.html")

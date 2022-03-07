@@ -1,0 +1,27 @@
+@media print {
+  @page {
+    margin: 0;
+  }
+
+  body {
+    font-size: 0.8rem;
+  }
+
+  .header,
+  .footer,
+  .get-in-touch {
+    display: none;
+  }
+
+  .cv {
+    flex-direction: row;
+  }
+
+  .cv__side {
+    width: 18rem;
+  }
+
+  .cv__main {
+    padding-left: 2rem;
+  }
+}
