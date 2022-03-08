@@ -81,3 +81,9 @@
     left: 0.33rem;
   }
 }
+
+@mixin reduce-motion-block {
+  @media (prefers-reduced-motion: reduce) {
+    @content;
+  }
+}
