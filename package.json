@@ -7,7 +7,7 @@
     "build:build": "npx gulp build",
     "build:delete": "npx gulp deleteBuild",
     "stylelint:fix": "npx stylelint --fix \"**/*.scss\"  --custom-syntax postcss-scss",
-    "prettier": "prettier ./src/**/*.{scss,js} --write"
+    "prettier:fix": "prettier ./src/**/*.{scss,js} --write"
   },
   "repository": {
     "type": "git",

@@ -12,17 +12,16 @@
 
 @import 'base/base';
 
+@import 'layout';
+
 @import 'link';
 
 @import 'btn';
 
 @import 'form';
 
-@import 'page';
-
 @import '../../components/components';
 
-@import 'pages/projects';
+@import 'pages/pages';
 
-@import 'pages/cv';
-@import 'print';
+@import 'pages/projects';

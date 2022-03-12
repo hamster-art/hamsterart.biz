@@ -71,6 +71,10 @@ h6 {
   font-family: 'KronaOne', sans-serif;
 }
 
+p + p {
+  margin-top: 1.5rem;
+}
+
 ul {
   margin: 0;
   padding: 0;

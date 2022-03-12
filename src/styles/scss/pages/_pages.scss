@@ -1,0 +1,23 @@
+.page-header {
+  margin-bottom: 2rem;
+  padding-top: 7rem;
+
+  @include md-block {
+    margin-bottom: 3rem;
+    padding-top: 10rem;
+  }
+}
+
+.page-header__title {
+  @include h3-font;
+
+  @include md-block {
+    @include h1-font;
+  }
+}
+
+.about {
+  p {
+    @include h4-font;
+  }
+}

@@ -1,5 +1,7 @@
 .link {
+  display: inline-flex;
   position: relative;
+  align-items: center;
 
   color: $primary;
   font-family: 'KronaOne', sans-serif;
