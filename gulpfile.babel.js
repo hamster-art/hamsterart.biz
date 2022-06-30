@@ -23,3 +23,4 @@ exports.html = html;
 
 const run = gulp.parallel(gulp.series(build, serve), watch);
 exports.run = run;
+exports.img = img;
